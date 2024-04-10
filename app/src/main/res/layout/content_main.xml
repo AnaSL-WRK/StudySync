@@ -45,5 +45,17 @@
         tools:layout_editor_absoluteX="70dp"
         tools:layout_editor_absoluteY="434dp" />
 
+    <!-- ImageView to display the settings cog SVG -->
+    <ImageView
+        android:id="@+id/settingsCogIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/settings_cog"
+        app:layout_constraintBottom_toBottomOf="@id/StudySyncTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
