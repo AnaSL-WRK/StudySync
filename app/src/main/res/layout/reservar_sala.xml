@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/settingsCogIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/settings_cog"
+        app:layout_constraintBottom_toBottomOf="@id/StudySyncTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291" />
+
+    <ImageView
+        android:id="@+id/homeIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="@id/StudySyncTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291" />
+
+    <TextView
+        android:id="@+id/StudySyncTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ImageView for the background of the date selector -->
+    <ImageView
+        android:id="@+id/dateSelector"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/light_green"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/StudySyncTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Left arrow for the date selector -->
+    <ImageButton
+        android:id="@+id/leftArrowDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_back_selector"
+        app:layout_constraintTop_toTopOf="@id/dateSelector"
+        app:layout_constraintBottom_toBottomOf="@id/dateSelector"
+        app:layout_constraintStart_toStartOf="@id/dateSelector"
+        android:padding="10dp"
+        android:background="?android:selectableItemBackground"/>
+
+
+    <!-- Right arrow for the date selector -->
+    <ImageButton
+        android:id="@+id/rightArrowDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_foward_selector"
+        app:layout_constraintTop_toTopOf="@id/dateSelector"
+        app:layout_constraintBottom_toBottomOf="@id/dateSelector"
+        app:layout_constraintEnd_toEndOf="@id/dateSelector"
+        android:padding="10dp"
+        android:background="?android:selectableItemBackground"/>
+
+
+
+    <!-- date display -->
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4 de Abril"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/dateSelector"
+        app:layout_constraintBottom_toBottomOf="@id/dateSelector"
+        app:layout_constraintStart_toEndOf="@id/leftArrowDate"
+        app:layout_constraintEnd_toStartOf="@id/rightArrowDate"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"/>
+
+
+    <ImageView
+        android:id="@+id/horasSelector"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/light_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateSelector" />
+
+
+    <!-- Hora de Início Label -->
+    <TextView
+        android:id="@+id/horaInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hora de Início"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@id/horasSelector"
+        app:layout_constraintStart_toStartOf="@id/horasSelector"
+        android:padding="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"
+       />
+
+    <!-- Hora de Início Button -->
+    <Button
+        android:id="@+id/startTimeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horas"
+        app:layout_constraintBottom_toBottomOf="@id/horaInicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/horaInicio"
+        app:layout_constraintTop_toTopOf="@id/horaInicio"/>
+
+
+
+    <!-- Hora de Término -->
+    <TextView
+        android:id="@+id/horaTermino"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hora de Término"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/horasSelector"
+        app:layout_constraintTop_toBottomOf="@id/horaInicio"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <!-- Hora de Término Button -->
+    <Button
+        android:id="@+id/endTimeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horas"
+        app:layout_constraintBottom_toBottomOf="@id/horaTermino"
+        app:layout_constraintStart_toEndOf="@+id/horasSelector"
+        app:layout_constraintStart_toStartOf="@+id/startTimeButton"
+        app:layout_constraintTop_toTopOf="@id/horaTermino" />
+
+    <!-- Confirm Button -->
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/round_squares"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endTimeButton"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
