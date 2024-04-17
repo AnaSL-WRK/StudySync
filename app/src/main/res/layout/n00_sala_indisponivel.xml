@@ -59,7 +59,7 @@
         android:id="@+id/ConfirmacaoTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sala indisonível"
+        android:text="Sala indisponível"
         android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="@id/reservaBackground"

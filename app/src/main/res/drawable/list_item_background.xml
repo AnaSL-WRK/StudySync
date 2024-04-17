@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#AAFFFFFF"/> <!-- #80 is the alpha value for 50% transparency -->
+    <corners android:radius="4dp"/>
+    <!-- Shadow can be done with a layer-list drawable or with elevation in Lollipop and above -->
+</shape>
